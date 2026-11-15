@@ -2,6 +2,10 @@
 pipeline {
     agent any
 
+    environment {
+        KUBECONFIG = 'C:\\Users\\spand\\.kube\\config'
+    }
+
     stages {
 
         stage('Pull Code') {
