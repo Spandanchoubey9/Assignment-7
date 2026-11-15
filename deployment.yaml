@@ -1,0 +1,21 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: assignment-7
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: assignment-7
+  template:
+    metadata:
+      labels:
+        app: assignment-7
+    spec:
+      containers:
+        - name: web-app
+          image: assignment-7-app
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 80
